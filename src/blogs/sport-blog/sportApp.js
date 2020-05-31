@@ -1,14 +1,12 @@
 import React from 'react'
 import SportBlogList from './sportBlogList.js'
-import NavigationBar from '../templates/navigationBar.js'
-import Logo from '../templates/logo.js'
+import Header from '../templates/header.js'
 
 
 function SportApp(){
     return (
     <div>
-        <Logo />
-        <NavigationBar />
+        <Header />
         <SportBlogList />
     </div>
     )

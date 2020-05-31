@@ -1,9 +1,7 @@
 import React from 'react';
 import './styles.css'
 
-function Blog(entry){
-    let props = entry.props
-    const altText = props.title + "picture"
+function Blog(props){
     const content = props.content.slice(0, 350)
     
     return (
@@ -11,7 +9,7 @@ function Blog(entry){
         <h1 className="title">{props.title}</h1>
         <div className="date">Published on {props.date}</div>
         <p className="content">{content}...</p>
-        <img className="image" src={props.image} alt={altText}/>
+        <img className="image" src={props.image} alt={props.title}/>
     </div> 
     )
 }

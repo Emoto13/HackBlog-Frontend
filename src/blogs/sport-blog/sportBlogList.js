@@ -1,6 +1,6 @@
 import BlogList from '../blogList.js'
 import React from 'react'
-import SportBlog from './sportBlog.js'
+import Blog from '../blog.js'
 
 class SportBlogList extends BlogList {
     componentDidMount(){
@@ -12,7 +12,7 @@ class SportBlogList extends BlogList {
 
      render_blogs = data => {
         return data
-        .map(props => <SportBlog
+        .map(props => <Blog
             id={props.id} 
             title={props.title} 
             content={props.content} 
