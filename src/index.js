@@ -4,12 +4,14 @@ import { Route, BrowserRouter as Router } from 'react-router-dom'
 import SportApp from './blogs/sport-blog/sportApp'
 
 import * as serviceWorker from './serviceWorker';
+import SportPost from './blogs/sport-blog/sportPost.js';
 
 
 const routing = (
   <Router>
     <div>
       <Route path="/sport" component={SportApp} />
+      <Route path="/sport-post/:id" component={SportPost} />
     </div>
   </Router>
 )
