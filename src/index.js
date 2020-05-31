@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+import SportApp from './blogs/sport-blog/sportApp'
+
 import * as serviceWorker from './serviceWorker';
 
+
+const routing = (
+  <Router>
+    <div>
+      <Route path="/sport" component={SportApp} />
+    </div>
+  </Router>
+)
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  routing,
   document.getElementById('root')
 );
 

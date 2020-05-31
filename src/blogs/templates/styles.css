@@ -1,0 +1,55 @@
+.navbar {
+	font-family: Roboto, Calibri;
+	font-weight: bolder;
+	height: 300px;
+	width: 300px;	
+}
+
+.navbar a {
+	background-color: black;
+	border-radius: 40px;
+	font-size: 20px;
+	padding: 15px;
+	padding-left: 40px;
+	padding-right: 40px;
+	position: relative;
+	top: -335px;
+	left: 500px;
+	text-decoration: none;
+	color: white;
+	font-weight: 200;
+	height: 300px;
+}
+
+.navbar a.active {
+	background-color: #AEACAC;
+	color: black;
+	font-weight: 600;
+	height: 100px;
+}
+.navbar img.social {
+	float: right;
+	width: 30px;
+	cursor: pointer;
+	padding-top: 10px;
+	padding-right: 25px;
+}
+
+.subtext {
+	display: inline-block;
+	height: 50px;
+	position: relative;
+	top: -20px;
+	left: 40px;
+	padding-right: 50px;
+}
+
+.logo {
+	height: 400px;
+	width: 500px;
+	position: relative;
+	top: -120px;
+	left: 0px;
+	
+}
+
