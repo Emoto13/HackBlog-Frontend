@@ -6,13 +6,14 @@ import * as serviceWorker from './serviceWorker';
 
 import PostApp from './blogs/post-components/postApp';
 import SportBlogsApp from './blogs/sport/sportBlogsApp';
+import CreatePostApp from './create-post/createPostApp';
 
 
 const routing = (
   <Router>
     <div>
       <Route path="/sport" component={SportBlogsApp} />
-
+      <Route path="/create-post" component={CreatePostApp} />
       <Route path="/:typePost/:id" component={PostApp} />
     </div>
   </Router>
