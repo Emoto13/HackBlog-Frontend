@@ -1,6 +1,6 @@
 .title {
     position: relative;
-    top: 5px;
+    top: 6px;
     left: 19px;
     font-size: 30px;
     margin-right: 35px;
@@ -32,7 +32,7 @@
     position: relative;
     height: 50px;
     width: 400px;
-    top: 36px;
+    top: 0px;
     left: 700px;
     white-space: pre-wrap;
 }

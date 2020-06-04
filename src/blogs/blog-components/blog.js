@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles.css'
+import './styles-blog.css'
 
 function Blog(props){
     const content = props.content.slice(0, 350)
