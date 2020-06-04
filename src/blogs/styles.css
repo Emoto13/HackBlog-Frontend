@@ -1,13 +1,14 @@
 .title {
     position: relative;
-    top: 10px;
-    left: 40px;
+    top: 5px;
+    left: 19px;
     font-size: 30px;
+    margin-right: 35px;
 }
 
 .image{
     position: relative;
-    top: -35px;
+    top: -65px;
     left: 40px;
     bottom: 50px;
     height: 40%;
@@ -39,6 +40,23 @@
 .date{
     position: relative;
     left: 40px;
-    top: 16px;
+    top: 10px;
     font-size: 18px;   
+}
+
+a.title:link{
+    text-decoration: none;
+}
+
+a.title:visited{
+    color: black;
+}
+
+a.title:hover{
+    color: red;
+    cursor: pointer;
+}
+
+a.title:active{
+    outline: 0;
 }

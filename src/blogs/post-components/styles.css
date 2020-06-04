@@ -1,0 +1,42 @@
+.div_post {
+    position: relative;
+    margin-top: -550px;
+    margin-left: 510px;
+    margin-right: 470px;
+}
+
+.title_post {
+    position: relative;
+    margin-top: 1px;
+    font-size: 30px;
+}
+
+.date_post {
+    position: relative;
+    left: 623px;
+    top: 29px;
+    font-size: 17px;
+    font-style: italic;
+}
+
+.author_name_post {
+    position: relative;
+    top: 8px;
+    font-style: italic;
+    font-size: 17px;
+}
+
+.image_post {
+    position: relative;
+    top:15px;
+    height: 100%;
+    width: 100%;
+}
+
+.p_post {
+    position: relative;
+    white-space: pre-wrap;
+    top: 30px;
+    font-size: 18px;
+    line-height: 27px;
+}
