@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import ImageUploader from 'react-images-upload'
 import Error404 from '../error-pages/error404'
 import Select from 'react-select'
-import axios from 'axios'
 
 
 const ALLOWED_IPS = ['87.116.74.183', '78.90.54.81']
