@@ -1,35 +1,29 @@
 import React, { Component } from 'react'
-import ImageUploader from 'react-images-upload';
-import Error404 from '../error-pages/error404';
+import ImageUploader from 'react-images-upload'
+import Error404 from '../error-pages/error404'
+import Select from 'react-select'
+import axios from 'axios'
+
 
 const ALLOWED_IPS = ['87.116.74.183', '78.90.54.81']
 
-class CreatePostForm extends Component{
-    SUCCESSFUL_OUTPUT = (
-        <div>
-            <input type="text" placeholder="Type your name..." /><br />
-            <textarea placeholder="Write your story here..."></textarea>
-            <ImageUploader
-            withIcon={true}
-            buttonText='Choose images'
-            onChange={this.onDrop}
-            imgExtension={['.jpg', '.gif', '.png', '.gif']}
-            maxFileSize={5242880}
-            />
-        </div>
-    )
+const options = [ 
+    {value:'sport', label: 'sport'},
+    {value:'politics', label: 'politics'},
+    {value:'tech', label: 'tech'},
+    {value:'opinion', label: 'opinion'},
+    {value:'other', label: 'other'}]
 
-    ERROR_OUTPUT = <Error404 />
-
-
+class CreatePostForm extends Component {
     constructor(props){
         super(props)
         this.state = {
             'title':'',
             'content':'',
             'image': '',
-            'date': '',
+            'authorName': '',
             'ipv4': '',
+            'typeOfPost':'sport',
             'loadingIP':true
         }
     }
@@ -48,10 +42,63 @@ class CreatePostForm extends Component{
         
         if (loadingIP) return 'Loading'
         
-        if (ALLOWED_IPS.includes(ipv4)) return this.SUCCESSFUL_OUTPUT
-        else return this.ERROR_OUTPUT 
-        
+        if (ALLOWED_IPS.includes(ipv4)) { 
+            return (
+                <form>
+                    <input type="text" placeholder="Type your name here..." onChange={this.handleAuthorNameChange} /><br />                    
+                    <input type="text" placeholder="Type post title here..." onChange={(e) => this.handleTitleChange(e)} /><br />
+                    <textarea placeholder="Write your story here..."  onChange={(e) => this.handleContentChange(e)}></textarea>
+                    <input name="image" type="file" onChange={(e) => this.handleImageChange(e.target.files[0])} />
+                    <Select 
+                    options={options}
+                    value={{value: this.state.typeOfPost, label: this.state.typeOfPost}} 
+                    onChange={(e) => this.handleDropdownChange(e)} />
+                    <button type="button" onClick={() => this.handleSubmitButton()}>Submit</button>
+                </form>
+            )
+        }
+        return <Error404 /> 
     }
+
+    handleAuthorNameChange = (e) => {
+        this.setState({"authorName": e.target.value})
+    }    
+
+    handleTitleChange(e){
+        this.setState({"title": e.target.value})
+    }
+
+    handleContentChange(e) {
+        this.setState({"content": e.target.value})
+    }
+
+    handleImageChange(e){
+        this.setState({"image": e})
+        console.log(e)
+    }
+
+    handleDropdownChange(e){
+       this.setState({"typeOfPost": e.value})
+    }
+
+
+    handleSubmitButton(){
+        const currentDate = new Date().toJSON().slice(0,10).split('/').join('-')
+        const uploadData = new FormData()
+        uploadData.append('title', this.state.title)
+        uploadData.append('author_name', this.state.authorName)
+        uploadData.append('content', this.state.content)
+        uploadData.append('date', currentDate)
+        uploadData.append('image', this.state.image)
+
+        fetch(`http://127.0.0.1:8000/${this.state.typeOfPost}/create`, {
+            method: 'POST',
+            body: uploadData
+          })
+          .then(res => console.log(res))
+          .catch(error => console.log(error))
+        }
+
 }
 
 export default CreatePostForm
