@@ -45,7 +45,7 @@ class CreatePostForm extends Component {
         if (ALLOWED_IPS.includes(ipv4)) { 
             return (
                 <form>
-                    <input type="text" placeholder="Type your name here..." onChange={this.handleAuthorNameChange} /><br />                    
+                    <input type="text" placeholder="Type your name here..." onChange={(e) => this.handleAuthorNameChange(e)} /><br />                    
                     <input type="text" placeholder="Type post title here..." onChange={(e) => this.handleTitleChange(e)} /><br />
                     <textarea placeholder="Write your story here..."  onChange={(e) => this.handleContentChange(e)}></textarea>
                     <input name="image" type="file" onChange={(e) => this.handleImageChange(e.target.files[0])} />
@@ -60,7 +60,7 @@ class CreatePostForm extends Component {
         return <Error404 /> 
     }
 
-    handleAuthorNameChange = (e) => {
+    handleAuthorNameChange(e){
         this.setState({"authorName": e.target.value})
     }    
 
@@ -74,7 +74,6 @@ class CreatePostForm extends Component {
 
     handleImageChange(e){
         this.setState({"image": e})
-        console.log(e)
     }
 
     handleDropdownChange(e){
