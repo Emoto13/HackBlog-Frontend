@@ -7,7 +7,7 @@ function Blog(props){
 
     return (
     <div className="div">
-        <a href={link} class="title"><h1 className="title">{props.title}</h1></a>
+        <a href={link} className="title"><h1 className="title">{props.title}</h1></a>
         <div className="date">Published on {props.date}</div>
         <p className="content">{content}...</p>
         <a href={link}><img className="image" src={props.image} alt={props.title}/></a>
