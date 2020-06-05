@@ -4,18 +4,30 @@ import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 import * as serviceWorker from './serviceWorker';
 
-import PostApp from './blogs/post-components/postApp';
+
 import SportBlogsApp from './blogs/sport/sportBlogsApp';
 import CreatePostApp from './create-post/createPostApp';
 import HomeApp from './home/homeApp.js';
+import TechBlogsApp from './blogs/tech/techBlogsApp';
+import OtherBlogApp from './blogs/other/otherBlogsApp';
+import PoliticsBlogsApp from './blogs/politics/politicsBlogsApp';
+import OpinionBlogsApp from './blogs/opinion/opinionBlogsApp';
+import PostApp from './posts/postApp';
 
 
 const routing = (
   <Router>
     <div>
-      <Route path="" component={HomeApp} />
+      <Route path="/home" component={HomeApp} />
+
       <Route path="/sport" component={SportBlogsApp} />
+      <Route path="/tech" component={TechBlogsApp} />
+      <Route path="/politics" component={PoliticsBlogsApp} />
+      <Route path="/opinion" component={OpinionBlogsApp} />
+      <Route path="/other" component={OtherBlogApp} />
+      
       <Route path="/create-post" component={CreatePostApp} />
+
       <Route path="/:typePost/:id" component={PostApp} />
     </div>
   </Router>
