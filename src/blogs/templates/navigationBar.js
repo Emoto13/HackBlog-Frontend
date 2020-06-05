@@ -6,7 +6,7 @@ import './styles.css'
 function NavigationBar(){ 
     return (
     <div className="navbar">
-        <Link to="">Home</Link>
+        <Link to="/home">Home</Link>
         <Link to="/politics">Politics</Link>
         <Link to="/sport">Sport</Link>
         <Link to="/tech">Tech</Link>
