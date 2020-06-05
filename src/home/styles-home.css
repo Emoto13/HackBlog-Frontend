@@ -47,3 +47,21 @@
   margin: 0;
   background: #adceed;
 }
+
+.slidelink:link{
+  text-decoration: none;
+  color: black;
+}
+
+.slidelink:visited{
+  color: black;
+}
+
+.slidelink:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.slidelink:active{
+    outline: 0;
+}
