@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Error404 from '../error-pages/error404'
 import Select from 'react-select'
+import './styles-create-post.css'
 
 
 const ALLOWED_IPS = ['87.116.74.183', '78.90.54.81']
@@ -42,16 +43,20 @@ class CreatePostForm extends Component {
         
         if (ALLOWED_IPS.includes(ipv4)) { 
             return (
-                <form>
-                    <input type="text" placeholder="Type your name here..." onChange={(e) => this.handleAuthorNameChange(e)} /><br />                    
-                    <input type="text" placeholder="Type post title here..." onChange={(e) => this.handleTitleChange(e)} /><br />
-                    <textarea placeholder="Write your story here..."  onChange={(e) => this.handleContentChange(e)}></textarea>
-                    <input name="image" type="file" onChange={(e) => this.handleImageChange(e.target.files[0])} />
+                <form className="container">
+                    <label for="blogs">Choose Blog</label>
                     <Select 
                     options={options}
                     value={{value: this.state.typeOfPost, label: this.state.typeOfPost}} 
-                    onChange={(e) => this.handleDropdownChange(e)} />
-                    <button type="button" onClick={() => this.handleSubmitButton()}>Submit</button>
+                    onChange={(e) => this.handleDropdownChange(e)} className='select' id="blogs"/>
+                    <label className='labelTitle' for='title'>Title</label>
+                    <input id='title' type="text" placeholder="Type post title here..." onChange={(e) => this.handleTitleChange(e)} className='titleCreate'/><br />
+                    <label className='labelContent' for='content'>Story</label>
+                    <textarea placeholder="Write your story here..."  onChange={(e) => this.handleContentChange(e)} id='content' className='contentCreate'></textarea>
+                    <label className='labelauthorName' for='authorName'>Author</label>
+                    <input type="text" placeholder="Type your name here..." onChange={(e) => this.handleAuthorNameChange(e)} id='authorName' className='authorNameCreate'/><br />
+                    <input className= 'imageCreate' name="image" type="file" onChange={(e) => this.handleImageChange(e.target.files[0])} />
+                    <button className='button' type="sumbit" onClick={() => this.handleSubmitButton()}>Submit</button>
                 </form>
             )
         }

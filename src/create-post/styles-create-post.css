@@ -1,0 +1,109 @@
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  position: relative;
+  top: -550px;
+  left: 500px;
+  right: 400px;
+  width: 830px;
+  height: 580px;
+}
+
+.select {
+    width: 150px;
+    position: relative;
+    top: 5px;
+}
+
+select:focus {
+    min-width: 150px;
+    width: auto;
+
+}
+
+.titleCreate{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+    top: 20px;
+}
+
+.contentCreate{
+    width: 100%;
+    height: 40%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+    top: 32px;
+}
+
+.authorNameCreate{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+    top: 43px;
+}
+
+.imageCreate{
+    top: 60px;
+    position: relative;
+}
+
+.labelTitle{
+    width:150px;
+    bottom:10px;
+    position: relative;
+    top: 20px;
+}
+
+.labelContent{
+    width:150px;
+    bottom:10px;
+    position: relative;
+    top: 30px;
+}
+
+.labelauthorName{
+    width:150px;
+    bottom:10px;
+    position: relative;
+    top: 40px;
+}
+
+.button{
+    top: 110px;
+    position: relative;
+    left: -276px;
+    background-color: #00C5BE;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    font-weight: normal;
+    transition-duration: 0.2s;
+}
+
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+textarea {
+  resize: none;
+}
