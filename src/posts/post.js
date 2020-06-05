@@ -11,7 +11,7 @@ function Post(props){
         <div className='authorNamePost'>Author: {props.author_name}</div>
         <img src={props.image} alt={props.title} className='imagePost'/>
         <div className='contentPost'>{props.content}</div>
-        <Link to="/create-post"><button className="buttonPost" type="button">Create your own page</button></Link>
+        <Link to="/create-post"><button className="buttonPost" type="button">Create your own post</button></Link>
     </div>
     )
 }

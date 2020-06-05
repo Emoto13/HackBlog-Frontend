@@ -14,7 +14,7 @@
 
 .datePost {
     position: relative;
-    left: 690px;
+    left: 732px;
     top: 29px;
     font-size: 17px;
     font-style: italic;
@@ -45,7 +45,27 @@
 
 .buttonPost{
     position: relative;
-    top: 50px;
+    left: 600px;
+    top: 60px;
+    background-color: #00C5BE;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    font-weight: normal;
+    transition-duration: 0.2s;
+}
+
+.buttonPost:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.buttonPost:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 body {
