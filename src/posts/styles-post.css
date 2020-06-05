@@ -1,0 +1,45 @@
+.divPost {
+    position: relative;
+    top: -550px;
+    left: 450px;
+    right: 470px;
+    margin: auto;
+}
+
+.titlePost {
+    position: relative;
+    margin-top: 1px;
+    font-size: 30px;
+    width: 50%;
+}
+
+.datePost {
+    position: relative;
+    left: 690px;
+    top: 29px;
+    font-size: 17px;
+    font-style: italic;
+}
+
+.authorNamePost {
+    position: relative;
+    top: 8px;
+    font-style: italic;
+    font-size: 17px;
+}
+
+.imagePost {
+    position: relative;
+    top: 15px;
+    height: 50%;
+    width: 50%;
+}
+
+.contentPost {
+    position: relative;
+    white-space: pre-wrap;
+    width: 50%;
+    top: 30px;
+    font-size: 18px;
+    line-height: 27px;
+}
