@@ -46,6 +46,7 @@
 
 a.title:link{
     text-decoration: none;
+    color: black;
 }
 
 a.title:visited{
